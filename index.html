@@ -1,5 +1,5 @@
 <html>
-    <head onload="Go();">
+    <head>
         <style>
             html {
                 margin-top: 15px;
@@ -40,12 +40,11 @@
         </style>
     </head>
     <body>
-        <input type="text" id="link" style="text-align:center;"></input>
-        <h1>Press [Enter] to redirect</h1>
+        <h1>Press [Enter] or tap/click anywhere to redirect to now gg</h1>
         
         <script>
             function Go() {
-                let url = document.getElementByID("link").value;
+                let url = 'now.gg';
                 maskedWindow = window.open();
 
                 const doc = maskedWindow.document;
@@ -85,6 +84,10 @@
                     Go();
                 }
             });
+            document.body.addEventListener('click', () => {
+                Go();
+            });
+
             Go();
         </script>
     </body>
