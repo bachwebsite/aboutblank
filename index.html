@@ -40,11 +40,12 @@
         </style>
     </head>
     <body>
-        <h1>Press [Enter] or tap/click anywhere to redirect</h1>
+        <input type="text" id="link" style="text-align:center;"></input>
+        <h1>Press [Enter] to redirect</h1>
         
         <script>
             function Go() {
-                let url = 'breads2de-rosy.vercel.app';
+                let url = document.getElementByID("link").value;
                 maskedWindow = window.open();
 
                 const doc = maskedWindow.document;
@@ -84,10 +85,6 @@
                     Go();
                 }
             });
-            document.body.addEventListener('click', () => {
-                Go();
-            });
-
             Go();
         </script>
     </body>
